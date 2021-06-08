@@ -1,0 +1,861 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="testMaven:war" />
+      <artifact name="testMaven:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="aecee4f0-904e-409a-95cf-7588b0c919ef" name="Default Changelist" comment="this is my graduation project-back&#10;java ssm maven idea tomcat mysql">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/asus.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/controller/CategoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/controller/ContractController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/controller/MemberController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/controller/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/controller/PositionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/controller/PurchaseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/controller/RequestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/controller/ResultController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/controller/SupplierController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/controller/UsersController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/entity/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/entity/CategorySupplier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/entity/Contract.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/entity/Member.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/entity/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/entity/OrderCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/entity/PageBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/entity/Postion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/entity/Purchase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/entity/PurchaseCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/entity/Request.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/entity/RequestCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/entity/Result.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/entity/ResultInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/entity/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/entity/Supplier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/entity/Users.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/mapper/CategoryMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/mapper/CategorySupplierMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/mapper/ContractMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/mapper/MemberMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/mapper/OrderCategoryMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/mapper/OrderMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/mapper/PositionMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/mapper/PurchaseCategoryMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/mapper/PurchaseMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/mapper/RequestCategoryMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/mapper/RequestMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/mapper/ResultMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/mapper/RoleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/mapper/SupplierMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/mapper/UsersMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/service/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/service/ContractService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/service/MemberService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/service/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/service/PositionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/service/PurchaseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/service/RequestService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/service/ResultService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/service/RoleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/service/SupplierService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/service/UsersService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/serviceImpl/CategoryServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/serviceImpl/ContractServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/serviceImpl/MemberServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/serviceImpl/OrderServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/serviceImpl/PositionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/serviceImpl/PurchaseServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/serviceImpl/RequestServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/serviceImpl/ResultServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/serviceImpl/RoleServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/serviceImpl/SupplierServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/serviceImpl/UsersServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/util/HtmlResourceView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oracle/util/MD5Util.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data-source.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/freemarker.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapperconfig/CategoryMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapperconfig/CategorySupplierMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapperconfig/ContractMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapperconfig/MemberMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapperconfig/OrderCategoryMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapperconfig/OrderMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapperconfig/PositionMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapperconfig/PurchaseCategoryMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapperconfig/PurchaseMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapperconfig/RequestCategoryMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapperconfig/RequestMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapperconfig/ResultMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapperconfig/RoleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapperconfig/SupplierMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapperconfig/UsersMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/spring-root.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/axios.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/vue.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/updateusers.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/usersbypageajax.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/usersbypageajax.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/usersbypageajax.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/controller/CategoryController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/controller/ContractController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/controller/MemberController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/controller/OrderController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/controller/PositionController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/controller/PurchaseController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/controller/RequestController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/controller/ResultController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/controller/SupplierController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/controller/UsersController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/entity/Category.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/entity/CategorySupplier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/entity/Contract.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/entity/Member.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/entity/Order.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/entity/OrderCategory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/entity/PageBean.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/entity/Postion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/entity/Purchase.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/entity/PurchaseCategory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/entity/Request.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/entity/RequestCategory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/entity/Result.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/entity/ResultInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/entity/Role.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/entity/Supplier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/entity/Users.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/mapper/CategoryMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/mapper/CategorySupplierMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/mapper/ContractMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/mapper/MemberMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/mapper/OrderCategoryMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/mapper/OrderMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/mapper/PositionMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/mapper/PurchaseCategoryMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/mapper/PurchaseMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/mapper/RequestCategoryMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/mapper/RequestMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/mapper/ResultMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/mapper/RoleMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/mapper/SupplierMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/mapper/UsersMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/service/CategoryService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/service/ContractService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/service/MemberService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/service/OrderService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/service/PositionService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/service/PurchaseService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/service/RequestService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/service/ResultService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/service/RoleService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/service/SupplierService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/service/UsersService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/service/impl/RoleServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/service/impl/UsersServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/serviceImpl/CategoryServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/serviceImpl/ContractServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/serviceImpl/MemberServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/serviceImpl/OrderServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/serviceImpl/PositionServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/serviceImpl/PurchaseServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/serviceImpl/RequestServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/serviceImpl/ResultServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/serviceImpl/SupplierServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/util/HtmlResourceView.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/oracle/util/MD5Util.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/data-source.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/freemarker.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/jdbc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapperconfig/CategoryMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapperconfig/CategorySupplierMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapperconfig/ContractMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapperconfig/MemberMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapperconfig/OrderCategoryMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapperconfig/OrderMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapperconfig/PositionMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapperconfig/PurchaseCategoryMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapperconfig/PurchaseMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapperconfig/RequestCategoryMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapperconfig/RequestMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapperconfig/ResultMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapperconfig/RoleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapperconfig/SupplierMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapperconfig/UsersMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/spring-mvc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/spring-root.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/controller/CategoryController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/controller/ContractController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/controller/MemberController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/controller/OrderController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/controller/PositionController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/controller/PurchaseController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/controller/RequestController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/controller/ResultController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/controller/SupplierController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/controller/UsersController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/entity/Category.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/entity/CategorySupplier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/entity/Contract.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/entity/Member.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/entity/Order.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/entity/OrderCategory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/entity/PageBean.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/entity/Postion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/entity/Purchase.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/entity/PurchaseCategory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/entity/Request.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/entity/RequestCategory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/entity/Result.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/entity/ResultInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/entity/Role.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/entity/Supplier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/entity/Users.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/mapper/CategoryMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/mapper/CategorySupplierMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/mapper/ContractMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/mapper/MemberMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/mapper/OrderCategoryMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/mapper/OrderMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/mapper/PositionMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/mapper/PurchaseCategoryMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/mapper/PurchaseMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/mapper/RequestCategoryMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/mapper/RequestMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/mapper/ResultMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/mapper/RoleMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/mapper/SupplierMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/mapper/UsersMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/service/CategoryService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/service/ContractService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/service/MemberService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/service/OrderService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/service/PositionService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/service/PurchaseService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/service/RequestService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/service/ResultService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/service/RoleService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/service/SupplierService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/service/UsersService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/service/impl/RoleServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/service/impl/UsersServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/serviceImpl/CategoryServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/serviceImpl/ContractServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/serviceImpl/MemberServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/serviceImpl/OrderServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/serviceImpl/PositionServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/serviceImpl/PurchaseServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/serviceImpl/RequestServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/serviceImpl/ResultServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/serviceImpl/SupplierServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/util/HtmlResourceView.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/com/oracle/util/MD5Util.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/data-source.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/freemarker.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/jdbc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/mapperconfig/CategoryMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/mapperconfig/CategorySupplierMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/mapperconfig/ContractMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/mapperconfig/MemberMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/mapperconfig/OrderCategoryMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/mapperconfig/OrderMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/mapperconfig/PositionMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/mapperconfig/PurchaseCategoryMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/mapperconfig/PurchaseMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/mapperconfig/RequestCategoryMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/mapperconfig/RequestMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/mapperconfig/ResultMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/mapperconfig/RoleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/mapperconfig/SupplierMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/mapperconfig/UsersMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/spring-mvc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/classes/spring-root.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/css/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/js/axios.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/js/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/js/vue.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/jsp/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/jsp/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/jsp/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/jsp/updateusers.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/jsp/usersbypageajax.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/jsp/usersbypageajax.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/lib/aspectjrt-1.8.6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/lib/aspectjweaver-1.8.6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/lib/commons-fileupload-1.3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/lib/commons-io-2.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/lib/druid-1.0.20.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/lib/freemarker-2.3.31.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/lib/jackson-annotations-2.7.6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/lib/jackson-core-2.7.6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/lib/jackson-databind-2.7.6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/lib/jcl-over-slf4j-1.7.22.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/lib/jstl-1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/lib/log4j-1.2.15.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/lib/mybatis-3.3.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/lib/mybatis-spring-1.2.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/lib/mysql-connector-java-5.1.25.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/lib/slf4j-api-1.7.22.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/lib/slf4j-log4j12-1.7.22.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/lib/spring-aop-4.3.7.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/lib/spring-beans-4.3.7.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/lib/spring-context-4.3.7.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/lib/spring-context-support-4.3.7.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/lib/spring-core-4.3.7.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/lib/spring-expression-4.3.7.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/lib/spring-jdbc-4.3.7.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/lib/spring-test-4.3.7.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/lib/spring-tx-4.3.7.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/lib/spring-web-4.3.7.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/lib/spring-webmvc-4.3.7.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/testMaven/resources/usersbypageajax.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/zhuxiaomishop/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testMaven.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jsp File" />
+        <option value="HTML File" />
+        <option value="FxmlFile" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="D:\Graduation\testMaven\testMaven\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/assembileForTraining/apache-maven-3.3.9-bin/apache-maven-3.3.9" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ppoYRUdk30OkdnKpOYuSWarofb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Graduation\testMaven\testMaven\src\main\webapp\WEB-INF" />
+      <recent name="D:\Graduation\testMaven\testMaven\src\main\webapp\WEB-INF\jsp" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.oracle.serviceImpl" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Graduation\testMaven\testMaven\src\main\webapp\resources" />
+      <recent name="D:\Graduation\testMaven\testMaven\src\main\webapp\WEB-INF\js" />
+      <recent name="D:\Graduation\testMaven\testMaven\src\main\webapp\WEB-INF\css" />
+      <recent name="D:\Graduation\testMaven\testMaven\src\main\resources\mapperconfig" />
+      <recent name="D:\Graduation\testMaven\testMaven\src\main\java\com\oracle\entity" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 8.0.9" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.0.9" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8" nameIsGenerated="true">
+      <option name="COMMON_VM_ARGUMENTS" value="-Xms512m -Xmx512m -XX:MaxNewSize=1024m -XX:MaxPermSize=1024m" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="testMaven:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/testMaven" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Tomcat_8_0_9_testMaven" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="60851" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="testMaven:war" />
+          <artifact name="testMaven:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.0.9" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_testMaven" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="60851" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="LOCAL" value="false" />
+      <deployment />
+      <server-settings>
+        <data>
+          <option name="targets">
+            <list>
+              <WatchedTargetModelImpl>
+                <option name="name" value="CONTEXT_XML" />
+                <name>CONTEXT_XML</name>
+              </WatchedTargetModelImpl>
+              <StagingTargetModelImpl>
+                <option name="name" value="STAGING" />
+                <name>STAGING</name>
+              </StagingTargetModelImpl>
+            </list>
+          </option>
+          <option name="transportHostId" />
+        </data>
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="TOMCAT_LOCALHOST_LOG_ID" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="60861" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <option name="contentProportion" value="0.11407104" />
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aecee4f0-904e-409a-95cf-7588b0c919ef" name="Default Changelist" comment="" />
+      <created>1615889439316</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1615889439316</updated>
+      <workItem from="1615889450437" duration="1274000" />
+      <workItem from="1616036445397" duration="4450000" />
+      <workItem from="1616053657159" duration="651000" />
+      <workItem from="1616055110300" duration="9585000" />
+      <workItem from="1616466132088" duration="19269000" />
+      <workItem from="1616550842055" duration="20565000" />
+      <workItem from="1616674199451" duration="6575000" />
+      <workItem from="1617245435091" duration="3817000" />
+      <workItem from="1617695847901" duration="5946000" />
+      <workItem from="1617760800714" duration="34068000" />
+      <workItem from="1617846067469" duration="24749000" />
+      <workItem from="1617928224910" duration="1966000" />
+      <workItem from="1618136775648" duration="1514000" />
+      <workItem from="1618387777939" duration="6760000" />
+      <workItem from="1618466131455" duration="21399000" />
+      <workItem from="1618817176627" duration="13713000" />
+      <workItem from="1618887149544" duration="13453000" />
+      <workItem from="1618998351258" duration="2933000" />
+      <workItem from="1619494596934" duration="1865000" />
+      <workItem from="1620387009991" duration="21725000" />
+      <workItem from="1620461807074" duration="1191000" />
+      <workItem from="1620653258721" duration="1193000" />
+      <workItem from="1620725849516" duration="14503000" />
+      <workItem from="1620993824431" duration="20937000" />
+      <workItem from="1621134496138" duration="3792000" />
+      <workItem from="1621390358965" duration="10984000" />
+      <workItem from="1621496904934" duration="6730000" />
+      <workItem from="1621580275431" duration="10407000" />
+      <workItem from="1621673558775" duration="8796000" />
+      <workItem from="1621739658047" duration="10530000" />
+      <workItem from="1621843213034" duration="10929000" />
+      <workItem from="1621907358442" duration="17766000" />
+      <workItem from="1621996618977" duration="23679000" />
+      <workItem from="1622080460380" duration="21931000" />
+      <workItem from="1622177287236" duration="16388000" />
+      <workItem from="1622536184852" duration="12012000" />
+      <workItem from="1622689949805" duration="6895000" />
+      <workItem from="1622767185893" duration="2973000" />
+      <workItem from="1622788668628" duration="3947000" />
+      <workItem from="1623035841470" duration="4959000" />
+      <workItem from="1623122016844" duration="469000" />
+      <workItem from="1623126076498" duration="841000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="this is my graduation project-back&#10;java ssm maven idea tomcat mysql" />
+    <option name="LAST_COMMIT_MESSAGE" value="this is my graduation project-back&#10;java ssm maven idea tomcat mysql" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="74" key="#Project_Structure" timestamp="1616055553767">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="74" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1616055553767" />
+    <state x="360" y="74" key="#Tomcat_Server" timestamp="1616036669881">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="360" y="74" key="#Tomcat_Server/0.0.1536.824@0.0.1536.824" timestamp="1616036669881" />
+    <state x="223" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1616063515260">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1616063515260" />
+    <state x="471" y="221" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1616061441839">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="471" y="221" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1616061441839" />
+    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1622469999041">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1622469999041" />
+    <state x="360" y="74" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1616060352279">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="360" y="74" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1536.824@0.0.1536.824" timestamp="1616060352279" />
+    <state x="553" y="302" width="429" height="225" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1617794977702">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="553" y="302" width="429" height="225" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1617794977702" />
+    <state x="499" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1617246498649">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1617246498649" />
+    <state x="388" y="10" key="CommitChangelistDialog2" timestamp="1623126825630">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="388" y="10" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1623126825630" />
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1622554139238">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1622554139238" />
+    <state x="548" y="156" key="FileChooserDialogImpl" timestamp="1623126549884">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="548" y="156" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1623126549884" />
+    <state width="1283" height="153" key="GridCell.Tab.0.bottom" timestamp="1622795777961">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1283" height="153" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1622795777961" />
+    <state width="1283" height="153" key="GridCell.Tab.0.center" timestamp="1622795777961">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1283" height="153" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1622795777961" />
+    <state width="1283" height="153" key="GridCell.Tab.0.left" timestamp="1622795777961">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1283" height="153" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1622795777961" />
+    <state width="1283" height="153" key="GridCell.Tab.0.right" timestamp="1622795777961">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1283" height="153" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1622795777961" />
+    <state width="1283" height="153" key="GridCell.Tab.1.bottom" timestamp="1622795777961">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1283" height="153" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1622795777961" />
+    <state width="1283" height="153" key="GridCell.Tab.1.center" timestamp="1622795777961">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1283" height="153" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1622795777961" />
+    <state width="1283" height="153" key="GridCell.Tab.1.left" timestamp="1622795777961">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1283" height="153" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1622795777961" />
+    <state width="1283" height="153" key="GridCell.Tab.1.right" timestamp="1622795777961">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1283" height="153" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1622795777961" />
+    <state width="1283" height="153" key="GridCell.Tab.2.bottom" timestamp="1622795777962">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1283" height="153" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1622795777962" />
+    <state width="1283" height="153" key="GridCell.Tab.2.center" timestamp="1622795777962">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1283" height="153" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1622795777962" />
+    <state width="1283" height="153" key="GridCell.Tab.2.left" timestamp="1622795777962">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1283" height="153" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1622795777962" />
+    <state width="1283" height="153" key="GridCell.Tab.2.right" timestamp="1622795777962">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1283" height="153" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1622795777962" />
+    <state width="1296" height="382" key="GridCell.Tab.3.bottom" timestamp="1621505150286">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1296" height="382" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1621505150286" />
+    <state width="1296" height="382" key="GridCell.Tab.3.center" timestamp="1621505150285">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1296" height="382" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1621505150285" />
+    <state width="1296" height="382" key="GridCell.Tab.3.left" timestamp="1621505150285">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1296" height="382" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1621505150285" />
+    <state width="1296" height="382" key="GridCell.Tab.3.right" timestamp="1621505150286">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1296" height="382" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1621505150286" />
+    <state width="1296" height="323" key="GridCell.Tab.4.bottom" timestamp="1617879715227">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1296" height="323" key="GridCell.Tab.4.bottom/0.0.1536.824@0.0.1536.824" timestamp="1617879715227" />
+    <state width="1296" height="323" key="GridCell.Tab.4.center" timestamp="1617879715227">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1296" height="323" key="GridCell.Tab.4.center/0.0.1536.824@0.0.1536.824" timestamp="1617879715227" />
+    <state width="1296" height="323" key="GridCell.Tab.4.left" timestamp="1617879715223">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1296" height="323" key="GridCell.Tab.4.left/0.0.1536.824@0.0.1536.824" timestamp="1617879715204" />
+    <state width="1296" height="323" key="GridCell.Tab.4.right" timestamp="1617879715227">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1296" height="323" key="GridCell.Tab.4.right/0.0.1536.824@0.0.1536.824" timestamp="1617879715227" />
+    <state width="1296" height="128" key="GridCell.Tab.5.bottom" timestamp="1618496376614">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1296" height="128" key="GridCell.Tab.5.bottom/0.0.1536.824@0.0.1536.824" timestamp="1618496376614" />
+    <state width="1296" height="128" key="GridCell.Tab.5.center" timestamp="1618496376614">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1296" height="128" key="GridCell.Tab.5.center/0.0.1536.824@0.0.1536.824" timestamp="1618496376614" />
+    <state width="1296" height="128" key="GridCell.Tab.5.left" timestamp="1618496376613">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1296" height="128" key="GridCell.Tab.5.left/0.0.1536.824@0.0.1536.824" timestamp="1618496376613" />
+    <state width="1296" height="128" key="GridCell.Tab.5.right" timestamp="1618496376614">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1296" height="128" key="GridCell.Tab.5.right/0.0.1536.824@0.0.1536.824" timestamp="1618496376614" />
+    <state x="250" y="30" key="SettingsEditor" timestamp="1623126514932">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="250" y="30" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1623126514932" />
+    <state x="490" y="154" width="540" height="524" key="StructurePopup" timestamp="1622005017225">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="490" y="154" width="540" height="524" key="StructurePopup/0.0.1536.824@0.0.1536.824" timestamp="1622005017225" />
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1622554139238">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1622554139238" />
+    <state x="461" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1623126075463">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="461" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1623126075463" />
+    <state x="339" y="61" key="com.intellij.javaee.view.ServerArtifactsDialog" timestamp="1617848049488">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="339" y="61" key="com.intellij.javaee.view.ServerArtifactsDialog/0.0.1536.824@0.0.1536.824" timestamp="1617848049488" />
+    <state x="178" y="117" key="new project wizard" timestamp="1620653859992">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="178" y="117" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1620653859992" />
+    <state x="511" y="45" key="refactoring.ChangeSignatureDialog" timestamp="1622106641133">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="511" y="45" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1622106641133" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1622179989224">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1622179989224" />
+  </component>
+</project>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace配置为数据访问层的接口的 包名.接口名称  -->
+<mapper namespace="com.oracle.mapper.CategoryMapper">
+
+    <!-- 获取所有可选择品类信息 -->
+    <select id="getAllCat" resultType="com.oracle.entity.Category">
+        select * from category
+        where catStatus = 2;
+    </select>
+
+    <!-- 新增品类信息 -->
+    <insert id="addCat">
+        insert into category
+        (catName, catUnit, catStatus, catLevel, catSuper)
+        values(#{catName}, #{catUnit}, 0, 0, '')
+    </insert>
+
+    <!-- 修改品类信息状态 -->
+    <update id="updateCatStatus">
+        update category
+        set catStatus = #{catStatus}
+        where catId = #{catId};
+    </update>
+
+    <!-- 修改品类信息 -->
+    <update id="updateCat">
+        update category
+        set catName = #{catName}, catUnit = #{catUnit}, catStatus=1
+        where catId = #{catId};
+    </update>
+
+    <!--删除品类信息-->
+    <delete id="delCat">
+        delete from category
+        where catId = #{catId}
+    </delete>
+
+    <!-- 获取所有状态正常的品类信息 -->
+    <select id="getAllCatBy" resultType="com.oracle.entity.Category">
+        select * from category
+        where 1=1
+        <if test="catName!=null and catName!=''">
+            <bind name="catName" value="'%'+catName+'%'"/>
+            and catName like #{catName}
+        </if>
+    </select>
+
+    <!-- 获取所有未审核的品类信息 -->
+    <select id="getAllCatNoPas" resultType="com.oracle.entity.Category">
+        select * from category
+        where catStatus = 1
+    </select>
+
+    <!--查询所有该请购单没有选择过的品类信息-->
+    <select id="getAllCatCan" resultType="com.oracle.entity.Category">
+        select * from category
+        where catStatus=3
+        and catId not in(select catId from request_category where reqId=#{reqId})
+    </select>
+
+    <!--查询某方案某供应商品类信息-->
+    <select id="getPurSupCat" resultType="java.util.HashMap">
+        select purCat.*, cat.catName, cat.catUnit from purchase_category purCat
+        left join category cat
+        on cat.catId=purCat.catId
+        where purId=#{purId} and catSupplier=#{supId}
+        and cat.catId not in(select catId from order_category where ordId=#{ordId})
+    </select>
+
+    <!--通过名字获得品类-->
+    <select id="getAllCatByName" resultType="com.oracle.entity.Category">
+        select * from category
+        where catName=#{catName}
+    </select>
+
+    <!--获取所有审核通过的品类信息-->
+    <select id="getAllCatPass" resultType="com.oracle.entity.Category">
+        select * from category
+        where catStatus=3
+    </select>
+
+</mapper>

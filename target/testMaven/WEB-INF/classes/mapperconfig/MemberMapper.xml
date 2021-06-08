@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace配置为数据访问层的接口的 包名.接口名称  -->
+<mapper namespace="com.oracle.mapper.MemberMapper">
+    <!--通过条件获取成员信息-->
+    <select id="getMemBy" resultType="com.oracle.entity.Member">
+        select * from member
+        where 1=1
+        <if test="memName != null and memName != ''">
+            <bind name="memName" value="'%'+memName+'%'"/>
+            and memName like #{memName}
+        </if>
+        <if test="memPwd != null and memPwd != ''">
+            <bind name="memPwd" value="memPwd"/>
+            and memPwd = #{memPwd}
+        </if>
+        <if test="memIsInner != -1">
+            <bind name="memIsInner" value="memIsInner"/>
+            and memIsInner = #{memIsInner}
+        </if>
+    </select>
+
+    <!--新增用户-->
+    <insert id="addMem" parameterType="com.oracle.entity.Member">
+        insert into member(memName, memPwd,memRealName, memPhone, memEmail, memIsInner, memPosition)
+        values(#{memname},#{mempwd},#{memrealname},#{memphone},#{mememail},#{memisinner}, #{memposition});
+    </insert>
+
+    <!--更新用户信息-->
+    <update id="updMem" parameterType="com.oracle.entity.Member">
+        update member
+        set memName=#{memname},memPwd=#{mempwd},memRealName=#{memrealname},memPhone=#{memphone},memEmail=#{mememail},memIsInner=#{memisinner}, memPosition=#{memposition}
+        where memId = #{memid}
+    </update>
+
+    <!--通过Id删除用户信息-->
+    <delete id="delMemById">
+        delete from member
+        where memId = #{memId}
+    </delete>
+
+    <!--通过I获取用户-->
+    <select id="getMemById" resultType="com.oracle.entity.Member">
+        select * from member
+        where memId = #{memId}
+    </select>
+
+
+
+</mapper>

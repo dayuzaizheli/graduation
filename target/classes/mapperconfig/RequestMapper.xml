@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace配置为数据访问层的接口的 包名.接口名称  -->
+<mapper namespace="com.oracle.mapper.RequestMapper">
+
+    <!-- 获取用户名下所有请购单数据 -->
+    <select id="getAllReq" resultType="java.util.HashMap">
+		select request.*, member.memRealName from request
+        left join member
+        on request.reqMember = member.memId
+        where reqMember = #{memId}
+	</select>
+
+    <!-- 通过reqId获得单条请购数据信息 -->
+    <select id="getReqByReqId" resultType="com.oracle.entity.Request">
+        select * from request
+        where reqId = #{reqId};
+    </select>
+
+    <!-- 新建新的请购单-->
+    <insert id="addReq" >
+        insert into request
+        set reqMember = #{memId}, reqStatus = 0, reqLevel = #{reqLevel}, reqName = concat(#{reqName},now()), creTime=now()
+    </insert>
+
+    <!-- 删除一条请购单 -->
+    <delete id="delReq">
+        delete  from request
+        where reqId = #{reqId};
+    </delete>
+
+    <!-- 修改请购单状态 -->
+    <update id="updateReqStatus">
+        update request
+        set reqStatus = #{reqStatus}
+        where reqId = #{reqId};
+    </update>
+
+    <!-- 查询所有未审核采购单信息 -->
+    <select id="getAllReqNoPas" resultType="java.util.HashMap">
+        select request.*, member.memRealName from request
+        left join member
+        on request.reqMember = member.memId
+        where reqStatus = 1 and reqLevel=0
+    </select>
+
+    <!--汇总所有未被汇总的请购单品类数据-->
+    <select id="colreqNoPurCat" resultType="java.util.HashMap">
+        select catId, sum(catNum) catNum from request req
+            inner join request_category reqcat on req.reqId = reqcat.reqId
+        where req.reqLevel=0 and req.reqStatus=3
+        group by catId
+    </select>
+
+    <!--查询没有确定采购方案的请购单-->
+    <select id="getColReqNoPur" resultType="com.oracle.entity.Request">
+        select * from request
+        where reqLevel=1 and reqStatus=0
+    </select>
+
+    <!--获取没有采购方案的请购单-->
+    <select id="getColReqNoPass" resultType="com.oracle.entity.Request">
+        select * from request
+        where reqLevel=1 and (reqStatus=0 or reqStatus=1)
+    </select>
+
+    <!--获得所有应该被汇总的请购单-->
+    <select id="getReqNoPur" resultType="com.oracle.entity.Request">
+        select req.* from request req
+            inner join request_category reqcat on req.reqId = reqcat.reqId
+        where req.reqLevel=0 and req.reqStatus=3
+        group by req.reqId
+    </select>
+
+</mapper>

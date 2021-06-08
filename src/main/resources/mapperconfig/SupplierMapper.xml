@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace配置为数据访问层的接口的 包名.接口名称  -->
+<mapper namespace="com.oracle.mapper.SupplierMapper">
+
+    <!--通过采购接口人Id获取供应商信息-->
+    <select id="getSupById" resultType="com.oracle.entity.Supplier">
+        select * from supplier
+        where supAgent = #{memId}
+    </select>
+
+    <!--获取所有状态正常的供应商信息-->
+    <select id="getAllSup" resultType="com.oracle.entity.Supplier">
+        select * from supplier
+    </select>
+
+    <!--添加信息供应商基本信息-->
+    <insert id="addSup" parameterType="com.oracle.entity.Supplier">
+        insert into supplier(supName, supAgent, supNumber, supRegTime, supStatus)
+        values(#{supname}, #{supagent}, 0, now(), 0)
+    </insert>
+
+    <!--修改供应商状态信息-->
+    <update id="updateSupStatus">
+        update supplier
+        set supStatus = #{supStatus}
+        where supId = #{supId}
+    </update>
+
+    <!--通过Id删除供应商-->
+    <delete id="delSup">
+        delete from supplier
+        where supId = #{supId}
+    </delete>
+
+    <!--修改供应商基本信息-->
+    <update id="updSup" parameterType="com.oracle.entity.Supplier">
+        update supplier
+        set supAgent=#{supagent}, supName=#{supname}
+        where supId = #{supid}
+    </update>
+
+    <!--获取所有待审核的供应商信息-->
+    <select id="getAllSupNoPass" resultType="com.oracle.entity.Supplier">
+        select * from supplier
+        where supStatus = 1
+    </select>
+
+    <!--通过name获得供应商信息-->
+    <select id="getSupByName" resultType="com.oracle.entity.Supplier">
+        select * from supplier
+        where 1=1
+        <if test="name != null and name != ''">
+            <bind name="supName" value="'%'+name+'%'"/>
+            and supName like #{supName}
+        </if>
+    </select>
+
+    <!--获得某采购方案里的供应商信息-->
+    <select id="getPurSup" resultType="com.oracle.entity.Supplier">
+        select * from supplier
+        where supId in (select catSupplier from purchase_category where purId = #{purId})
+    </select>
+
+    <!--获取所有审核通过的供应商-->
+    <select id="getAllSupPass" resultType="com.oracle.entity.Supplier">
+        select * from supplier
+        where supStatus=3
+    </select>
+
+    <!--通过supId获得供应商信息-->
+    <select id="getSupBySupId" resultType="com.oracle.entity.Supplier">
+        select * from supplier
+        where supId=#{supId}
+    </select>
+
+</mapper>

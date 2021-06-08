@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace配置为数据访问层的接口的 包名.接口名称  -->
+<mapper namespace="com.oracle.mapper.ResultMapper">
+
+    <!--新增采购结果-->
+    <insert id="addRes" parameterType="com.oracle.entity.Result">
+        insert into result(purId, resName, resStatus)
+        values(#{purid}, #{resname}, 0)
+    </insert>
+
+    <!--查询某方案对应的采购结果-->
+    <select id="getResByPurId" resultType="com.oracle.entity.Result">
+        select * from result
+        where purId = #{purId}
+    </select>
+
+    <!--新增采购结果品类信息-->
+    <insert id="addResInfo" parameterType="com.oracle.entity.ResultInfo">
+        insert into result_info(resId, catId, catNum, supplier)
+        values(#{resid}, #{catid}, #{catnum}, #{supplier})
+    </insert>
+
+    <!--获得所有采购结果信息-->
+    <select id="getAllRes" resultType="com.oracle.entity.Result">
+        select * from result
+    </select>
+
+    <!--获得某采购结果品类信息-->
+    <select id="getResInfoBy" resultType="com.oracle.entity.ResultInfo">
+        select * from result_info
+        where resId = #{resId}
+    </select>
+
+    <!--更新resultInfo的num-->
+    <update id="updResInfoNum">
+        update result_info
+        set catNum=#{catNum}
+        where resinfId=#{id}
+    </update>
+
+    <!--通过方案名获得采购结果-->
+    <select id="getResByPurName" resultType="com.oracle.entity.Result">
+        select * from result
+        where 1=1
+        <if test="purName!=null and purName!=''">
+            <bind name="purName" value="'%'+purName+'%'"></bind>
+            and resName like #{purName}
+        </if>
+    </select>
+
+</mapper>

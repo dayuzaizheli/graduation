@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace配置为数据访问层的接口的 包名.接口名称  -->
+<mapper namespace="com.oracle.mapper.OrderCategoryMapper">
+
+    <!--选择某个订单的品类内容-->
+    <select id="getAllOrdCatBy" resultType="com.oracle.entity.OrderCategory">
+        select * from order_category
+        where ordId = #{ordId}
+    </select>
+
+    <!--通过订单Id删除订单品类信息-->
+    <delete id="delCatByOrdId">
+        delete from order_category
+        where ordId = #{ordId}
+    </delete>
+
+    <!--通过Id删除订单品类信息-->
+    <delete id="delOrdCatById">
+        delete from order_category
+        where ordcatId = #{catId}
+    </delete>
+
+    <!--新增订单品类信息-->
+    <insert id="addOrdCat" parameterType="com.oracle.entity.OrderCategory">
+        insert into order_category(ordId, catId, catNum, total)
+        values(#{ordid}, #{catid}, #{catnum}, #{total})
+    </insert>
+
+    <!--修改订单品类信息-->
+    <update id="updOrdCat" parameterType="com.oracle.entity.OrderCategory">
+        update order_category
+        set catNum = #{catnum}, total=#{total}
+        where ordcatId = #{ordcatid}
+    </update>
+
+</mapper>

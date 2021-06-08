@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace配置为数据访问层的接口的 包名.接口名称  -->
+<mapper namespace="com.oracle.mapper.ContractMapper">
+
+    <!-- 新增合同 -->
+    <insert id="addCon" parameterType="com.oracle.entity.Contract">
+        insert into contract
+        values(null, #{conname}, #{consupplier}, #{concontent}, #{conoriquota}, #{consurquota}, #{consgintime},
+         #{conbegintime}, #{conendtime} , #{constatus})
+    </insert>
+
+    <!-- 删除合同 -->
+    <delete id="delCon">
+        delete from contract
+        where conId = #{conId}
+    </delete>
+
+    <!-- 修改合同 -->
+    <update id="updCon" parameterType="com.oracle.entity.Contract">
+        update contract
+        set conName=#{conname}, conSupplier=#{consupplier}, conContent=#{concontent}, conOriQuota=#{conoriquota},
+        conSurQuota=#{consurquota}, conSginTime=#{consgintime}, conBeginTime=#{conbegintime}, conEndTime=#{conendtime},
+        conStatus=#{constatus}
+        where conId = #{conid}
+    </update>
+
+    <!-- 获取所有状态正常的合同信息 -->
+    <select id="getAllCon" resultType="com.oracle.entity.Contract">
+        select * from contract
+        where conStatus = 1
+    </select>
+
+    <!--根据条件获取所有合同-->
+    <select id="getAllConBy" resultType="com.oracle.entity.Contract">
+        select * from contract
+        where 1=1
+        <if test="conName!=null and conName!=''">
+            <bind name="conName" value="'%'+conName+'%'"></bind>
+            and conName like #{conName}
+        </if>
+        <if test="conSupplier>0">
+            <bind name="conSupplier" value="conSupplier"></bind>
+            and conSupplier = #{conSupplier}
+        </if>
+        <if test="conStatus>0">
+            <bind name="conStatus" value="conStatus"></bind>
+            and conStatus = #{conStatus}
+        </if>
+    </select>
+
+    <!--修改合同状态-->
+    <update id="updateConStatus">
+        update contract
+        set conStatus = #{conStatus}
+        where conId = #{conId}
+    </update>
+
+    <!--通过id查询合同-->
+    <select id="getConById" resultType="com.oracle.entity.Contract">
+        select * from contract
+        where conId = #{conId}
+    </select>
+
+</mapper>

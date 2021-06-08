@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace配置为数据访问层的接口的 包名.接口名称  -->
+<mapper namespace="com.oracle.mapper.PurchaseCategoryMapper">
+
+    <!--获取该采购方案绑定的品类供应商信息-->
+    <select id="getAllPurCatByPurId" resultType="com.oracle.entity.PurchaseCategory">
+        select * from purchase_category
+        where purId = #{purId}
+    </select>
+
+    <!--获得某方案某品类的方案品类信息-->
+    <select id="getCatByPurAndCat" resultType="com.oracle.entity.PurchaseCategory">
+        select * from purchase_category
+        where purId=#{purId} and catId=#{catId}
+    </select>
+
+    <!--添加方案品类供应商信息-->
+    <insert id="addPurCat" parameterType="com.oracle.entity.PurchaseCategory">
+        insert into purchase_category(purId, catId, catNum, catSupplier, total)
+        values(#{purid},#{catid},#{catnum},#{catsupplier},#{total})
+    </insert>
+
+    <!--修改品类供应商信息-->
+    <update id="updPurCat" parameterType="com.oracle.entity.PurchaseCategory">
+        update purchase_category
+        set catId=#{catid}, catNum=#{catnum}, catSupplier=#{catsupplier}, total=#{total}
+        where purcatId=#{purcatid}
+    </update>
+
+    <!--删除某方案所有品类供应商信息-->
+    <delete id="delPurCatByPurId">
+        delete from purchase_category
+        where purId=#{purId}
+    </delete>
+
+    <!--对某方案所有品类金额求和-->
+    <select id="sumTotalByPurId" resultType="java.lang.Double">
+        select sum(total) from purchase_category
+        where purId = #{purId}
+    </select>
+
+    <!--删除方案品类ByID-->
+    <delete id="delPurCat">
+        delete from purchase_category
+        where purcatId=#{purCatId}
+    </delete>
+</mapper>

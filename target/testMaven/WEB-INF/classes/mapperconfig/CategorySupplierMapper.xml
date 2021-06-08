@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace配置为数据访问层的接口的 包名.接口名称  -->
+<mapper namespace="com.oracle.mapper.CategorySupplierMapper">
+
+    <!--新增品类供应商信息-->
+    <insert id="addCatSup" parameterType="com.oracle.entity.CategorySupplier">
+        insert into category_supplier(catId, supId, price)
+        values(#{catid}, #{supid}, #{price})
+    </insert>
+
+    <!--通过供应商Id删除品类供应商信息-->
+    <delete id="delCatSupBy">
+        delete from category_supplier
+        where supId = #{supId}
+    </delete>
+
+    <!--修改品类供应商信息-->
+    <update id="updCatSup">
+        update category_supplier
+        set price=#{price}
+        where catsupId = #{catSupId}
+    </update>
+
+    <!--通过供应商Id获取所有品类供应商信息-->
+    <select id="getAllcatSupBy" resultType="com.oracle.entity.CategorySupplier">
+        select * from category_supplier
+        where supId = #{supId}
+    </select>
+
+    <!--通过ID删除供应商品类信息-->
+    <delete id="delCatSupById">
+        delete from category_supplier
+        where catsupId=#{catSupId}
+    </delete>
+
+    <!--通过Id获得供应商品类信息-->
+    <select id="getCatSupByID" resultType="com.oracle.entity.CategorySupplier">
+        select * from category_supplier
+        where catsupId=#{catSupId}
+    </select>
+
+</mapper>

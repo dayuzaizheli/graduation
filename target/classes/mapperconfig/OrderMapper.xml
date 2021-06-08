@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace配置为数据访问层的接口的 包名.接口名称  -->
+<mapper namespace="com.oracle.mapper.OrderMapper">
+
+    <!--添加新订单-->
+    <insert id="addOrder" parameterType="com.oracle.entity.Order">
+        insert into db_graduation.order(ordName, ordPurId, ordSupplier, ordMember, ordMemSup, ordCreTime, ordStatus, total, ordCon)
+        values(#{ordname}, #{ordpurid}, #{ordsupplier}, #{ordmember}, #{ordmemsup}, now(), 0, 0, #{ordcon})
+    </insert>
+
+    <!--查询采购经理的订单-->
+    <select id="getAllOrdByCgjl" resultType="java.util.HashMap">
+        select ord.*, sup.supName, mem.memRealName, con.conName, pur.purName from db_graduation.order ord
+        left join supplier sup
+        on ord.ordSupplier=sup.supId
+        left join member mem
+        on ord.ordMember=mem.memId
+        left join contract con
+        on ord.ordCon=con.conId
+        left join purchase pur
+        on pur.purId=ord.ordPurId
+        where ord.ordMember=#{memId}
+        order by ord.ordCreTime desc
+    </select>
+
+    <!--查询采购接口人的订单-->
+    <select id="getAllOrdByCgjkr" resultType="java.util.HashMap">
+        select ord.*, sup.supName, mem.memRealName, con.conName, pur.purName from db_graduation.order ord
+        left join supplier sup
+        on ord.ordSupplier=sup.supId
+        left join member mem
+        on ord.ordMember=mem.memId
+        left join contract con
+        on ord.ordCon=con.conId
+        left join purchase pur
+        on pur.purId=ord.ordPurId
+        where ord.ordMemSup = #{memId}
+        and ord.ordStatus!=0
+        order by ord.ordCreTime desc
+    </select>
+
+    <!--通过Id删除订单-->
+    <delete id="delOrdById">
+        delete from db_graduation.order
+        where ordId = #{ordId}
+    </delete>
+
+    <!--修改订单状态-->
+    <update id="updOrdStatus">
+        update db_graduation.order
+        set ordStatus = #{status}
+        <if test="status == 2">
+            , ordBeginTime = now()
+        </if>
+        <if test="status == 3">
+            , ordConTimSup = now()
+        </if>
+        <if test="status == 4">
+            , ordConTime = now()
+        </if>
+        where ordId = #{ordId}
+    </update>
+
+    <!--通过Id获得订单信息-->
+    <select id="getOrdById" resultType="com.oracle.entity.Order">
+        select * from db_graduation.order
+        where ordId = #{ordId}
+    </select>
+
+    <!--更新订单-->
+    <delete id="updOrd" parameterType="com.oracle.entity.Order">
+        update db_graduation.order
+        set total = #{total}
+        where ordId = #{ordid}
+    </delete>
+
+    <!--查询某方案最终状态的订单-->
+    <select id="getOrdOnAPurPass" resultType="com.oracle.entity.Order">
+        select * from db_graduation.order
+        where ordPurId = #{purId}
+        and ordStatus = 4
+    </select>
+
+    <!--统计分析-->
+    <select id="staAnaByTime" parameterType="java.util.Date" resultType="java.util.HashMap">
+        select concat(cat.catName,'(',cat.catUnit, ')') cat, sum(ordCat.catNum) num, sum(ordCat.total) total from db_graduation.order ord
+        right join order_category ordCat
+        on ord.ordId=ordCat.ordId
+        inner join category cat
+        on cat.catId=ordCat.catId
+        where ordConTime between #{sta} and #{end}
+        group by ordCat.catId;
+    </select>
+
+</mapper>

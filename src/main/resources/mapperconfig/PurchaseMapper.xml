@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace配置为数据访问层的接口的 包名.接口名称  -->
+<mapper namespace="com.oracle.mapper.PurchaseMapper">
+
+    <!--获取未确认的采购方案-->
+    <select id="getPurNoPass" resultType="com.oracle.entity.Purchase">
+        select * from purchase
+        where purMember=#{purMem}
+        and purStatus !=3
+        and purStatus !=4
+    </select>
+
+    <!--新增采购方案-->
+    <insert id="addPur">
+        insert into purchase(purName, purMember, purStatus, total, creTime)
+        values(#{purname}, #{purmember}, 0, 0, now())
+    </insert>
+
+    <!--获取该用户所有采购方案-->
+    <select id="getAllPur" resultType="com.oracle.entity.Purchase">
+        select * from purchase
+        where purMember=#{purMem}
+        and purStatus !=4
+    </select>
+
+    <!--获取所有未审核的采购方案-->
+    <select id="getAllPurNoPass" resultType="com.oracle.entity.Purchase">
+        select * from purchase
+        where purStatus = 1
+    </select>
+
+    <!--获取汇总请购单的品类信息-->
+    <select id="getColReqCatInfo" resultType="java.util.HashMap">
+        select c.catId, c.catName, c.catUnit, rc.catNum
+        from request_category rc
+        left join category c
+            on rc.catId = c.catId
+        where rc.reqId = #{reqId}
+    </select>
+
+    <!--获得该品类所有有合同的供应商信息-->
+    <select id="getCatSup" resultType="com.oracle.entity.Supplier">
+        select * from supplier
+        where supId in(select supId from category_supplier where catId=#{catId})
+    </select>
+
+    <!--获取供应商所有有余额的合同信息-->
+    <select id="getSupConHaveSur" resultType="com.oracle.entity.Contract">
+        select * from contract
+        where conSupplier=#{supId} and conSurQuota>0
+    </select>
+
+    <!--删除方案-->
+    <delete id="delPurById">
+        delete from purchase
+        where purId=#{purId}
+    </delete>
+
+    <!--修改方案状态-->
+    <update id="updPurStatus">
+        update purchase
+        set purStatus=#{status}
+        where purId=#{purId}
+    </update>
+
+    <!--通过Id获得方案-->
+    <select id="getPurById" resultType="com.oracle.entity.Purchase">
+        select * from purchase
+        where purId=#{purId}
+    </select>
+
+    <!--获取所有通过审核的采购方案-->
+    <select id="ordGetPurPass" resultType="com.oracle.entity.Purchase">
+        select * from purchase
+        where purStatus = 3
+        order by creTime desc
+    </select>
+
+    <!--更新采购方案-->
+    <update id="updPur" parameterType="com.oracle.entity.Purchase">
+        update purchase
+        set total=#{total}
+        where purId=#{purid}
+    </update>
+
+    <!--获取品类供应商信息带价格的-->
+    <select id="getCatSupCan" resultType="java.util.HashMap">
+        select * from supplier sup
+        inner join category_supplier catsup
+        on sup.supId=catsup.supId
+        where catsup.catId=#{catId}
+        and sup.supId in
+        <foreach collection="supIds" index="index" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </select>
+</mapper>

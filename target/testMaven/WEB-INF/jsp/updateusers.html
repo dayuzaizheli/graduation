@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>updaupdateusers</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+
+    <br>
+
+    <br>
+    {{ myname }}
+
+    isvalue: ${id}
+    <br>
+    listsvalue: ${rolelist[0].rolename}
+    listvalue: ${users.uname}
+
+</div>
+
+
+
+</body>
+<script>
+    var user_id = "${rolelist[0].rolename}";
+    //let myName="${rolelist}";
+    var app = new Vue({
+        el: '#app',
+        data: {
+            //message:myName[0].rolename,
+            myname:user_id
+        }
+    })
+</script>
+</html>

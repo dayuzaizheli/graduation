@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace配置为数据访问层的接口的 包名.接口名称  -->
+<mapper namespace="com.oracle.mapper.PositionMapper">
+    <!--通过ID获取职位信息-->
+    <select id="getPosById" resultType="com.oracle.entity.Postion">
+        select * from postion
+        where posId = #{memPos}
+    </select>
+
+    <!--获取所有岗位信息-->
+    <select id="getAllPos" resultType="com.oracle.entity.Postion">
+        select * from postion
+    </select>
+
+    <!--添加岗位-->
+    <insert id="addPos" parameterType="com.oracle.entity.Postion">
+        insert into postion
+        set posName=#{posname}, posResp=#{posresp}, posPower=#{pospower}, posRemark=#{posremark}
+    </insert>
+
+</mapper>

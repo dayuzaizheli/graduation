@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace配置为数据访问层的接口的 包名.接口名称  -->
+<mapper namespace="com.oracle.mapper.RequestCategoryMapper">
+
+    <!-- 删除一条请购单对应的所有选购品类信息 -->
+    <delete id="delReqCat">
+        delete  from request_category
+        where reqId = #{reqId}
+    </delete>
+
+    <!-- 获取一条请购单下所有已选品类信息 -->
+    <select id="getReqCatByReqId" resultType="com.oracle.entity.RequestCategory">
+        select * from request_category
+        where reqId = #{reqId};
+    </select>
+
+    <!-- 新增一条选购品类信息 -->
+    <insert id="addReqCat">
+        insert into request_category
+        (reqId, catId, catNum)
+        values (#{reqId}, #{catId}, #{catNum});
+    </insert>
+
+    <!-- 修改已购品类信息 -->
+    <update id="updateReqCat">
+        update request_category
+        set catNum = #{catNum}
+        where reqCatId = #{reqCatId};
+    </update>
+
+    <!-- 删除一条已购品类信息 -->
+    <delete id="delReqCatById">
+        delete  from request_category
+        where reqcatId = #{reqCatId}
+    </delete>
+
+</mapper>
